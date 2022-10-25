@@ -304,6 +304,8 @@ a:hover {
   height: 3px;
   background-color: #003458;
   position: absolute;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .header__burger-span:hover path {
@@ -326,6 +328,28 @@ a:hover {
   bottom: 0;
   right: 0;
   width: 22px;
+}
+
+.header__burger.show span:nth-child(1) {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -9px;
+}
+
+.header__burger.show span:nth-child(2) {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.header__burger.show span:nth-child(3) {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 41px;
+  top: 20px;
 }
 
 @media screen and (min-width: 800px) {

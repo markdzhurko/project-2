@@ -138,6 +138,7 @@
             height: 3px;
             background-color: $blue;
             position: absolute;
+            transition: all .3s ease;
             &:hover path {
                 stroke: $light-blue;
             }
@@ -157,6 +158,21 @@
             width: 22px;
 
         }
+
+    }
+    &__burger.show span:nth-child(1) {
+        transform-origin: bottom left;
+        transform: rotate(45deg);
+        top: -9px;
+    }
+    &__burger.show span:nth-child(2) {
+        transform: scaleX(0);
+    }
+    &__burger.show span:nth-child(3) {
+        transform-origin: top left;
+        transform: rotate(-45deg);
+        width: 41px;
+        top: 20px;
     }
 }
 
