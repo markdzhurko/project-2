@@ -150,12 +150,13 @@ a:hover {
           transform: translateX(-100%);
   visibility: hidden;
   opacity: 0;
+  z-index: 10;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .header__menu-body {
-  background-color: #E2E2E2;
+  background-color: #FFFFFF;
   padding: 40px 30px;
   width: 330px;
 }
@@ -217,6 +218,7 @@ a:hover {
           transform: translateX(-100%);
   visibility: hidden;
   opacity: 0;
+  z-index: 10;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
@@ -229,7 +231,7 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #E2E2E2;
+  background-color: #FFFFFF;
   padding: 40px 30px;
   width: 330px;
 }
@@ -377,6 +379,7 @@ a:hover {
   }
   .header__logo::before {
     left: -79px;
+    height: 91px;
   }
   .header__menu {
     position: static;
@@ -485,6 +488,66 @@ a:hover {
   }
 }
 
+.trustee {
+  position: relative;
+}
+
+.trustee__pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #0A1F32;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+.trustee__pic::before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, color-stop(5.21%, #003458), color-stop(8.46%, #003458), color-stop(99.06%, rgba(0, 52, 88, 0)));
+  background: linear-gradient(90deg, #003458 5.21%, #003458 8.46%, rgba(0, 52, 88, 0) 99.06%);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .trustee__pic:before {
+    background: -webkit-gradient(linear, left top, right top, color-stop(5.21%, #003458), color-stop(36.46%, #003458), color-stop(99.06%, rgba(0, 52, 88, 0)));
+    background: linear-gradient(90deg, #003458 5.21%, #003458 36.46%, rgba(0, 52, 88, 0) 99.06%);
+    width: 55%;
+  }
+  .trustee__pic::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: -webkit-gradient(linear, right top, left top, color-stop(5.21%, #003458), to(rgba(0, 52, 88, 0)));
+    background: linear-gradient(270deg, #003458 5.21%, rgba(0, 52, 88, 0) 100%);
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .trustee__pic::after {
+    background: -webkit-gradient(linear, right top, left top, color-stop(16.21%, #003458), to(rgba(0, 52, 88, 0)));
+    background: linear-gradient(270deg, #003458 16.21%, rgba(0, 52, 88, 0) 100%);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .trustee__pic::after {
+    background: -webkit-gradient(linear, right top, left top, color-stop(36.21%, #003458), to(rgba(0, 52, 88, 0)));
+    background: linear-gradient(270deg, #003458 36.21%, rgba(0, 52, 88, 0) 100%);
+  }
+}
+
 .footer {
   background-color: #1A1C26;
 }
@@ -565,6 +628,8 @@ a:hover {
   padding: 0;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .footer__sections-listTraders.show {

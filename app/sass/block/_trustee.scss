@@ -1,0 +1,59 @@
+.trustee {
+    position: relative;
+    &__pic {
+        display: flex;
+        background-color: #0A1F32;
+        justify-content: center;
+        object-fit: cover;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            background: $gradient-home-mobile-l;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+@media screen and (min-width:800px) {
+    .trustee {
+        &__pic {
+            &:before {
+                background: $gradient-home-img-l;
+                width: 55%;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                background: $gradient-home-img-r;
+                width: 55%;
+            }
+        }
+    }
+}
+@media screen and (min-width:1300px) {
+    .trustee {
+        &__pic {
+            &::after {
+                background: linear-gradient(270deg, #003458 16.21%, rgba(0, 52, 88, 0) 100%)
+            }
+        }
+    }
+}
+@media screen and (min-width:1500px) {
+    .trustee {
+        &__pic {
+            &::after {
+                background: linear-gradient(270deg, #003458 36.21%, rgba(0, 52, 88, 0) 100%)
+            }
+        }
+    }
+}
+
+
