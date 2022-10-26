@@ -485,4 +485,310 @@ a:hover {
   }
 }
 
+.footer {
+  background-color: #1A1C26;
+}
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 0;
+}
+
+.footer__info {
+  margin-bottom: 40px;
+  width: 270px;
+}
+
+.footer__info-logos {
+  margin-bottom: 40px;
+}
+
+.footer__info-address {
+  margin-bottom: 23px;
+}
+
+.footer__info-text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  color: #687086;
+}
+
+.footer__sponsor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 260px;
+  margin-bottom: 40px;
+}
+
+.footer__sections-traders {
+  border-top: 2px solid rgba(249, 249, 251, 0.1);
+  border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+  padding: 15px 0;
+}
+
+.footer__sections-analytics {
+  border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+  padding: 15px 0;
+}
+
+.footer__sections-education {
+  border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+  padding: 15px 0;
+}
+
+.footer__sections-company {
+  border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+  padding: 15px 0;
+}
+
+.footer__sections-documents {
+  border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+  padding: 15px 0;
+}
+
+.footer__sections-list {
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.footer__sections-listTraders.show {
+  position: static;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.footer__sections-listAnalytics.show {
+  position: static;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.footer__sections-listEducation.show {
+  position: static;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.footer__sections-listCompany.show {
+  position: static;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.footer__sections-listDocuments.show {
+  position: static;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.footer__sections-item {
+  margin: 5px 0;
+}
+
+.footer__sections-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #F9F9FB;
+  opacity: 0.6;
+}
+
+.footer__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__card-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #F9F9FB;
+}
+
+.footer__card-svg {
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+.footer__card-svg:hover path {
+  stroke: #73CBE8;
+}
+
+.footer__tm {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 30px;
+}
+
+.footer__tm-text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #687086;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  .footer__info {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: -webkit-min-content -webkit-min-content;
+    grid-template-rows: min-content min-content;
+  }
+  .footer__info-logos {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .footer__info-address {
+    grid-column: 1/2;
+    grid-row: 2/-1;
+  }
+  .footer__sponsor {
+    margin: 0;
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+  }
+  .footer__sections {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: -webkit-min-content -webkit-min-content;
+    grid-template-rows: min-content min-content;
+    border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+    padding-bottom: 80px;
+  }
+  .footer__sections-traders {
+    border: none;
+    padding: 0;
+  }
+  .footer__sections-analytics {
+    border: none;
+    padding: 0;
+  }
+  .footer__sections-education {
+    border: none;
+    padding: 0;
+    grid-column: 2/3;
+    margin-top: -185px;
+  }
+  .footer__sections-company {
+    border: none;
+    padding: 0;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: -97px;
+  }
+  .footer__sections-documents {
+    border: none;
+    padding: 0;
+    grid-column: 3/-1;
+    grid-row: 1/2;
+  }
+  .footer__sections-list {
+    list-style: none;
+    position: static;
+    padding: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  .footer__sections-item {
+    margin: 12px 0;
+  }
+  .footer__card {
+    margin-bottom: 30px;
+  }
+  .footer__card-svg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: grid;
+    grid-template-columns: 33.333% 66.666%;
+    grid-template-rows: 1fr;
+  }
+  .footer__info {
+    display: block;
+  }
+  .footer__sections {
+    border-bottom: none;
+    padding-bottom: 70px;
+  }
+  .footer__tm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    border-top: 2px solid rgba(249, 249, 251, 0.1);
+    grid-column: 1/-1;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .footer__sections {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 60px;
+  }
+  .footer__sections-education {
+    margin-top: 0;
+  }
+  .footer__sections-company {
+    margin-top: 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
