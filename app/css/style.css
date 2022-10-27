@@ -516,6 +516,51 @@ a:hover {
   width: 100%;
 }
 
+.trustee__icons-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.trustee__icons-microsoft {
+  position: absolute;
+  top: 12%;
+  left: 35%;
+}
+
+.trustee__icons-google {
+  position: absolute;
+  top: 38%;
+  left: 35%;
+}
+
+.trustee__icons-graphicBig {
+  display: none;
+}
+
+.trustee__icons-graphicsmall {
+  display: none;
+}
+
+.trustee__icons-intel {
+  position: absolute;
+  top: 11%;
+  right: 40%;
+}
+
+.trustee__icons-kolos {
+  display: none;
+}
+
+.trustee__icons-sims {
+  position: absolute;
+  top: 13%;
+  right: 23%;
+}
+
 @media screen and (min-width: 800px) {
   .trustee__pic:before {
     background: -webkit-gradient(linear, left top, right top, color-stop(5.21%, #003458), color-stop(36.46%, #003458), color-stop(99.06%, rgba(0, 52, 88, 0)));
