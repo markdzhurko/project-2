@@ -1,0 +1,319 @@
+.trustee {
+    position: relative;
+    background: url(../../img/trustee/mans.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: $txt;
+    background-size: 1200px 608px;
+    height: 608px;
+    &__icons {
+        &::before {
+            content: '';
+            background: $gradient-home-mobile-l;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+        }
+        &-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        &-microsoft {
+            position: absolute;
+            top: 12%;
+            left: 35%;
+        }
+        &-bitoc {
+            position: absolute;
+            bottom: 47%;
+            right: 30%;
+        }
+        &-google {
+            position: absolute;
+            top: 38%;
+            left: 25%;
+        }
+        &-graphicBig {
+            display: none;
+        }
+        &-graphicsmall {
+            display: none;
+        }
+        &-graphicYellow {
+            display: none;
+        }
+        &-intel {
+            position: absolute;
+            top: 11%;
+            right: 40%;
+        }
+        &-kolos {
+            position: absolute;
+            bottom: 25%;
+            right: 45%;
+        }
+        &-sims {
+            position: absolute;
+            top: 13%;
+            right: 23%;
+        }
+        &-dollar {
+            display: none;
+        }
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        height: 608px;
+        &-content {
+            z-index: 2;
+            max-width: 454px;
+        }
+        &-title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+            color: $white;
+            margin-top: 110px;
+        }
+        &-text {
+            font-size: 18px;
+            line-height: 29px;
+            color: $bg;
+            margin-top: 20px;
+        }
+        &-btn {
+            padding: 23px 61px;
+            margin-top: 30px;
+        }
+        &-playBox {
+
+        }
+        &-play {
+            display: none;
+        }
+    }
+
+}
+@media screen and (min-width:800px) {
+    .trustee {
+        &__icons {
+            &::before {
+                width: 70%;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                background: $gradient-home-img-r;
+                width: 45%;
+                z-index: 2;
+            }
+            &-microsoft {
+                position: absolute;
+                top: 12%;
+                left: 40%;
+            }
+            &-bitoc {
+                top: 6%;
+                right: 13%;
+            }
+            &-google {
+                position: absolute;
+                top: 8%;
+                left: 25%;
+            }
+            &-graphicBig {
+                display: none;
+            }
+            &-graphicsmall {
+                display: none;
+            }
+            &-graphicYellow {
+                display: block;
+                position: absolute;
+                bottom: 35%;
+                right: 15%;
+            }
+            &-intel {
+                position: absolute;
+                top: 4%;
+                right: 50%;
+            }
+            &-kolos {
+                position: absolute;
+                bottom: 20%;
+                right: 55%;
+            }
+            &-sims {
+                top: 46%;
+                right: 11%;
+            }
+            &-dollar {
+                display: block;
+                position: absolute;
+                top: 17%;
+                right: 20%;
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px) {
+    .trustee {
+        &__body {
+            flex-direction: row;
+            justify-content: space-between;
+            &-content {
+                width: 50%;
+            }
+            &-play {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+            }
+            &-playBox {
+                height: 85px;
+                width: 85px;
+                z-index: 3;
+                background-color: $white;
+                border-radius: 50%;
+                position: relative;
+            }
+            &-img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &__icons {
+            &-microsoft {
+                top: 12%;
+                left: 30%;
+            }
+            &-bitoc {
+                top: 28%;
+                right: 28%;
+            }
+            &-google {
+                top: 15%;
+                left: 66%;
+            }
+            &-graphicBig {
+                display: block;
+                position: absolute;
+                top: 47%;
+                right: 72%;
+            }
+            &-graphicsmall {
+                display: block;
+                position: absolute;
+                top: 15%;
+                right: 18%;
+                z-index: 1;
+            }
+            &-graphicYellow {
+                bottom: 42%;
+                right: 20%;
+            }
+            &-intel {
+                top: 4%;
+                right: 50%;
+            }
+            &-kolos {
+                bottom: 20%;
+                right: 10%;
+            }
+            &-sims {
+                top: 46%;
+                right: 11%;
+            }
+            &-dollar {
+                top: 17%;
+                right: 11%;
+            }
+        }
+    }
+}
+@media screen and (min-width:1300px) {
+    .trustee {
+        &__icons {
+            &::before {
+                background: linear-gradient(90deg, #003458 16.21%, rgba(0, 52, 88, 0) 100%)
+            }
+            &::after {
+                background: linear-gradient(270deg, #003458 16.21%, rgba(0, 52, 88, 0) 100%)
+            }
+        }
+    }
+}
+@media screen and (min-width:1500px) {
+    .trustee {
+        &__icons {
+            &::before {
+                background: linear-gradient(90deg, #003458 26.21%, rgba(0, 52, 88, 0) 100%)
+            }
+            &::after {
+                background: linear-gradient(270deg, #003458 36.21%, rgba(0, 52, 88, 0) 100%)
+            }
+            &-microsoft {
+                top: 32%;
+                left: 30%;
+            }
+            &-bitoc {
+                top: 0%;
+                right: 36%;
+            }
+            &-google {
+                top: 9%;
+                left: 56%;
+            }
+            &-graphicBig {
+                display: block;
+                position: absolute;
+                top: 47%;
+                right: 72%;
+            }
+            &-graphicsmall {
+                display: block;
+                position: absolute;
+                top: 15%;
+                right: 18%;
+                z-index: 1;
+            }
+            &-graphicYellow {
+                bottom: 42%;
+                right: 27%;
+            }
+            &-intel {
+                top: 18%;
+                right: 60%;
+            }
+            &-kolos {
+                bottom: 20%;
+                right: 30%;
+            }
+            &-sims {
+                top: 46%;
+                right: 24%;
+            }
+            &-dollar {
+                top: 17%;
+                right:25%;
+            }
+        }
+    }
+}
+
+

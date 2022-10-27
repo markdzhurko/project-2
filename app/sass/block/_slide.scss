@@ -1,0 +1,145 @@
+.slide {
+    height: 200px;
+    &__body {
+        position: relative;
+    }
+    &__list {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        margin: 0 -22px;
+        overflow-x: scroll;
+        height: 209px;
+        z-index: 2;
+        top: -98px;
+        width: 100%;
+        &::-webkit-scrollbar {
+            display: none;
+            }
+        &-body {
+            padding: 0 22px;
+        }
+        &-card {
+            background: url(../img/slide/mansSmall.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 197px;
+            width: 198px;
+            position: relative;
+            border-radius: 0 0 30px 10px;
+            cursor: pointer;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 212px;
+                background-color:transparent;
+                bottom: 99px;
+                left: -7px;
+                height: 101px;
+                border-top: 7px solid $white;
+                border-left: 7px solid $white;
+                border-right: 7px solid $white;
+                border-radius: 10px 10px 0 0;
+                z-index: 3;
+            }
+            &:hover::before {
+                background-color: rgba(15, 38, 62, 0.59);
+                border-top: 7px solid $light-blue;
+                border-left: 7px solid $light-blue;
+                border-right: 7px solid $light-blue;
+            }
+            &::after {
+                content: 'Реферальные программы';
+                position: absolute;
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                line-height: 24px;
+                color: #FFFFFF;
+                padding: 20px 15px;
+                width: 212px;
+                background-color:rgba(15, 38, 62, 0.59);
+                top: 98px;
+                left: -7px;
+                height: 106px;
+                border-bottom: 7px solid $light-blue;
+                border-left: 7px solid $light-blue;
+                border-right: 7px solid $light-blue;
+                border-radius: 0 0 30px 10px;
+            }
+        }
+        &-cardBonus {
+            background: url(../img/slide/bonus.jpg);
+            &::after {
+                content: 'Бонусы до 30%';
+            }
+        }
+        &-cardBuild {
+            background: url(../img/slide/build.jpg);
+            &::after {
+                content: 'Гарантия безопасной торговли';
+            }
+        }
+        &-cardArms {
+            background: url(../img/slide/arms.jpg);
+            &::after {
+                content: 'Эксперты международного рынка';
+            }
+        }
+        &-text {
+            display: flex;
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+            padding: 0 16px;
+            padding-top: 133px;
+            z-index: 4;
+        }
+    }
+}
+@media screen and (min-width:800px ) {
+    .slide {
+        &__list {
+            &-card {
+                width: 230px;
+                &::before {
+                    width: 244px;
+                }
+                &::after {
+                    width: 244px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px ) {
+    .slide {
+        &__list {
+            &-card {
+                width: 220px;
+                &::before {
+                    width: 234px;
+                }
+                &::after {
+                    width: 234px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1920px ) {
+    .slide {
+        &__list {
+            &-card {
+                width: 291px;
+                &::before {
+                    width: 304px;
+                }
+                &::after {
+                    width: 304px;
+                }
+            }
+        }
+    }
+}
+

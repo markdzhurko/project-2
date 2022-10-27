@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Inter';
   src: url("../fonts/inter/Inter-Bold.woff2") format("woff2"), url("../fonts/inter/Inter-Bold.woff2") format("woff");
@@ -46,7 +47,7 @@
 }
 
 .container {
-  max-width: 1530px;
+  max-width: 1574px;
   min-width: 300px;
   margin: 0 auto;
   padding: 0 30px;
@@ -490,22 +491,15 @@ a:hover {
 
 .trustee {
   position: relative;
-}
-
-.trustee__pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  background: url(../../img/trustee/mans.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
   background-color: #0A1F32;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
+  background-size: 1200px 608px;
+  height: 608px;
 }
 
-.trustee__pic::before {
+.trustee__icons::before {
   content: '';
   background: -webkit-gradient(linear, left top, right top, color-stop(5.21%, #003458), color-stop(8.46%, #003458), color-stop(99.06%, rgba(0, 52, 88, 0)));
   background: linear-gradient(90deg, #003458 5.21%, #003458 8.46%, rgba(0, 52, 88, 0) 99.06%);
@@ -513,6 +507,7 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
 }
 
@@ -531,10 +526,16 @@ a:hover {
   left: 35%;
 }
 
+.trustee__icons-bitoc {
+  position: absolute;
+  bottom: 47%;
+  right: 30%;
+}
+
 .trustee__icons-google {
   position: absolute;
   top: 38%;
-  left: 35%;
+  left: 25%;
 }
 
 .trustee__icons-graphicBig {
@@ -545,6 +546,10 @@ a:hover {
   display: none;
 }
 
+.trustee__icons-graphicYellow {
+  display: none;
+}
+
 .trustee__icons-intel {
   position: absolute;
   top: 11%;
@@ -552,7 +557,9 @@ a:hover {
 }
 
 .trustee__icons-kolos {
-  display: none;
+  position: absolute;
+  bottom: 25%;
+  right: 45%;
 }
 
 .trustee__icons-sims {
@@ -561,13 +568,57 @@ a:hover {
   right: 23%;
 }
 
+.trustee__icons-dollar {
+  display: none;
+}
+
+.trustee__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 608px;
+}
+
+.trustee__body-content {
+  z-index: 2;
+  max-width: 454px;
+}
+
+.trustee__body-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFFFFF;
+  margin-top: 110px;
+}
+
+.trustee__body-text {
+  font-size: 18px;
+  line-height: 29px;
+  color: #F9F9FB;
+  margin-top: 20px;
+}
+
+.trustee__body-btn {
+  padding: 23px 61px;
+  margin-top: 30px;
+}
+
+.trustee__body-play {
+  display: none;
+}
+
 @media screen and (min-width: 800px) {
-  .trustee__pic:before {
-    background: -webkit-gradient(linear, left top, right top, color-stop(5.21%, #003458), color-stop(36.46%, #003458), color-stop(99.06%, rgba(0, 52, 88, 0)));
-    background: linear-gradient(90deg, #003458 5.21%, #003458 36.46%, rgba(0, 52, 88, 0) 99.06%);
-    width: 55%;
+  .trustee__icons::before {
+    width: 70%;
   }
-  .trustee__pic::after {
+  .trustee__icons::after {
     content: '';
     position: absolute;
     top: 0;
@@ -575,21 +626,369 @@ a:hover {
     height: 100%;
     background: -webkit-gradient(linear, right top, left top, color-stop(5.21%, #003458), to(rgba(0, 52, 88, 0)));
     background: linear-gradient(270deg, #003458 5.21%, rgba(0, 52, 88, 0) 100%);
-    width: 55%;
+    width: 45%;
+    z-index: 2;
+  }
+  .trustee__icons-microsoft {
+    position: absolute;
+    top: 12%;
+    left: 40%;
+  }
+  .trustee__icons-bitoc {
+    top: 6%;
+    right: 13%;
+  }
+  .trustee__icons-google {
+    position: absolute;
+    top: 8%;
+    left: 25%;
+  }
+  .trustee__icons-graphicBig {
+    display: none;
+  }
+  .trustee__icons-graphicsmall {
+    display: none;
+  }
+  .trustee__icons-graphicYellow {
+    display: block;
+    position: absolute;
+    bottom: 35%;
+    right: 15%;
+  }
+  .trustee__icons-intel {
+    position: absolute;
+    top: 4%;
+    right: 50%;
+  }
+  .trustee__icons-kolos {
+    position: absolute;
+    bottom: 20%;
+    right: 55%;
+  }
+  .trustee__icons-sims {
+    top: 46%;
+    right: 11%;
+  }
+  .trustee__icons-dollar {
+    display: block;
+    position: absolute;
+    top: 17%;
+    right: 20%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .trustee__body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .trustee__body-content {
+    width: 50%;
+  }
+  .trustee__body-play {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+  }
+  .trustee__body-playBox {
+    height: 85px;
+    width: 85px;
+    z-index: 3;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    position: relative;
+  }
+  .trustee__body-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .trustee__icons-microsoft {
+    top: 12%;
+    left: 30%;
+  }
+  .trustee__icons-bitoc {
+    top: 28%;
+    right: 28%;
+  }
+  .trustee__icons-google {
+    top: 15%;
+    left: 66%;
+  }
+  .trustee__icons-graphicBig {
+    display: block;
+    position: absolute;
+    top: 47%;
+    right: 72%;
+  }
+  .trustee__icons-graphicsmall {
+    display: block;
+    position: absolute;
+    top: 15%;
+    right: 18%;
+    z-index: 1;
+  }
+  .trustee__icons-graphicYellow {
+    bottom: 42%;
+    right: 20%;
+  }
+  .trustee__icons-intel {
+    top: 4%;
+    right: 50%;
+  }
+  .trustee__icons-kolos {
+    bottom: 20%;
+    right: 10%;
+  }
+  .trustee__icons-sims {
+    top: 46%;
+    right: 11%;
+  }
+  .trustee__icons-dollar {
+    top: 17%;
+    right: 11%;
   }
 }
 
 @media screen and (min-width: 1300px) {
-  .trustee__pic::after {
+  .trustee__icons::before {
+    background: -webkit-gradient(linear, left top, right top, color-stop(16.21%, #003458), to(rgba(0, 52, 88, 0)));
+    background: linear-gradient(90deg, #003458 16.21%, rgba(0, 52, 88, 0) 100%);
+  }
+  .trustee__icons::after {
     background: -webkit-gradient(linear, right top, left top, color-stop(16.21%, #003458), to(rgba(0, 52, 88, 0)));
     background: linear-gradient(270deg, #003458 16.21%, rgba(0, 52, 88, 0) 100%);
   }
 }
 
 @media screen and (min-width: 1500px) {
-  .trustee__pic::after {
+  .trustee__icons::before {
+    background: -webkit-gradient(linear, left top, right top, color-stop(26.21%, #003458), to(rgba(0, 52, 88, 0)));
+    background: linear-gradient(90deg, #003458 26.21%, rgba(0, 52, 88, 0) 100%);
+  }
+  .trustee__icons::after {
     background: -webkit-gradient(linear, right top, left top, color-stop(36.21%, #003458), to(rgba(0, 52, 88, 0)));
     background: linear-gradient(270deg, #003458 36.21%, rgba(0, 52, 88, 0) 100%);
+  }
+  .trustee__icons-microsoft {
+    top: 32%;
+    left: 30%;
+  }
+  .trustee__icons-bitoc {
+    top: 0%;
+    right: 36%;
+  }
+  .trustee__icons-google {
+    top: 9%;
+    left: 56%;
+  }
+  .trustee__icons-graphicBig {
+    display: block;
+    position: absolute;
+    top: 47%;
+    right: 72%;
+  }
+  .trustee__icons-graphicsmall {
+    display: block;
+    position: absolute;
+    top: 15%;
+    right: 18%;
+    z-index: 1;
+  }
+  .trustee__icons-graphicYellow {
+    bottom: 42%;
+    right: 27%;
+  }
+  .trustee__icons-intel {
+    top: 18%;
+    right: 60%;
+  }
+  .trustee__icons-kolos {
+    bottom: 20%;
+    right: 30%;
+  }
+  .trustee__icons-sims {
+    top: 46%;
+    right: 24%;
+  }
+  .trustee__icons-dollar {
+    top: 17%;
+    right: 25%;
+  }
+}
+
+.slide {
+  height: 200px;
+}
+
+.slide__body {
+  position: relative;
+}
+
+.slide__list {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 -22px;
+  overflow-x: scroll;
+  height: 209px;
+  z-index: 2;
+  top: -98px;
+  width: 100%;
+}
+
+.slide__list::-webkit-scrollbar {
+  display: none;
+}
+
+.slide__list-body {
+  padding: 0 22px;
+}
+
+.slide__list-card {
+  background: url(../img/slide/mansSmall.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 197px;
+  width: 198px;
+  position: relative;
+  border-radius: 0 0 30px 10px;
+  cursor: pointer;
+}
+
+.slide__list-card::before {
+  content: '';
+  position: absolute;
+  width: 212px;
+  background-color: transparent;
+  bottom: 99px;
+  left: -7px;
+  height: 101px;
+  border-top: 7px solid #FFFFFF;
+  border-left: 7px solid #FFFFFF;
+  border-right: 7px solid #FFFFFF;
+  border-radius: 10px 10px 0 0;
+  z-index: 3;
+}
+
+.slide__list-card:hover::before {
+  background-color: rgba(15, 38, 62, 0.59);
+  border-top: 7px solid #73CBE8;
+  border-left: 7px solid #73CBE8;
+  border-right: 7px solid #73CBE8;
+}
+
+.slide__list-card::after {
+  content: 'Реферальные программы';
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  padding: 20px 15px;
+  width: 212px;
+  background-color: rgba(15, 38, 62, 0.59);
+  top: 98px;
+  left: -7px;
+  height: 106px;
+  border-bottom: 7px solid #73CBE8;
+  border-left: 7px solid #73CBE8;
+  border-right: 7px solid #73CBE8;
+  border-radius: 0 0 30px 10px;
+}
+
+.slide__list-cardBonus {
+  background: url(../img/slide/bonus.jpg);
+}
+
+.slide__list-cardBonus::after {
+  content: 'Бонусы до 30%';
+}
+
+.slide__list-cardBuild {
+  background: url(../img/slide/build.jpg);
+}
+
+.slide__list-cardBuild::after {
+  content: 'Гарантия безопасной торговли';
+}
+
+.slide__list-cardArms {
+  background: url(../img/slide/arms.jpg);
+}
+
+.slide__list-cardArms::after {
+  content: 'Эксперты международного рынка';
+}
+
+.slide__list-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  padding: 0 16px;
+  padding-top: 133px;
+  z-index: 4;
+}
+
+@media screen and (min-width: 800px) {
+  .slide__list-card {
+    width: 230px;
+  }
+  .slide__list-card::before {
+    width: 244px;
+  }
+  .slide__list-card::after {
+    width: 244px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .slide__list-card {
+    width: 220px;
+  }
+  .slide__list-card::before {
+    width: 234px;
+  }
+  .slide__list-card::after {
+    width: 234px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .slide__list-card {
+    width: 291px;
+  }
+  .slide__list-card::before {
+    width: 304px;
+  }
+  .slide__list-card::after {
+    width: 304px;
   }
 }
 
