@@ -112,7 +112,7 @@ a:hover {
   border-radius: 20px 6px;
 }
 
-.btn--transparent {
+.btn--transparent-blue {
   cursor: pointer;
   border-radius: 20px 6px;
   border: 2px solid #FFFFFF;
@@ -123,16 +123,40 @@ a:hover {
   background-color: transparent;
 }
 
-.btn--transparent:hover {
+.btn--transparent-blue:hover {
   background-color: transparent;
   border: 2px solid #73CBE8;
   border-radius: 20px 6px;
   color: #73CBE8;
 }
 
-.btn--transparent:active {
+.btn--transparent-blue:active {
   color: #FFFFFF;
   background-color: #73CBE8;
+  border-radius: 20px 6px;
+}
+
+.btn--transparent-orange {
+  cursor: pointer;
+  border-radius: 20px 6px;
+  border: 2px solid #FF813A;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FF813A;
+  background-color: transparent;
+}
+
+.btn--transparent-orange:hover {
+  background-color: #FF813A;
+  border: 2px solid #FF813A;
+  border-radius: 20px 6px;
+  color: #FFFFFF;
+}
+
+.btn--transparent-orange:active {
+  color: #FF813A;
+  background-color: transparent;
   border-radius: 20px 6px;
 }
 
@@ -1683,6 +1707,95 @@ a:hover {
     font-size: 18px;
     line-height: 29px;
   }
+}
+
+.access {
+  background-color: #F9F9FB;
+}
+
+.access__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.access__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.access__content-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #0A1F32;
+  padding-top: 100px;
+}
+
+.access__content-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #687086;
+  margin-top: 20px;
+}
+
+.access__content-btn {
+  font-size: 16px;
+  line-height: 19px;
+  padding: 25px 95px;
+  margin-top: 30px;
+}
+
+.access__icons-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 18px 20px 40px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 66px rgba(207, 207, 207, 0.25);
+          box-shadow: 0px 4px 66px rgba(207, 207, 207, 0.25);
+  width: 240px;
+  border-radius: 0 0 30px 0;
+}
+
+.access__icons-crypt {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: 13px;
+  margin-right: 19px;
+}
+
+.access__icons-name {
+  font-size: 18px;
+  line-height: 28px;
+  color: #0A1F32;
+  text-transform: uppercase;
+}
+
+.access__icons-currency {
+  font-size: 20px;
+  line-height: 29px;
+  color: #687086;
+  text-transform: uppercase;
+}
+
+.access__icons-arrow {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .footer {
