@@ -1,5 +1,6 @@
 .reasons {
     &__body {
+        padding-bottom: 250px;
         &-title {
             font-family: 'Inter';
             font-style: normal;
@@ -16,7 +17,6 @@
         flex-direction: column;
         &-body {
             padding: 15px 0;
-
         }
         &-list {
             display: flex;
@@ -248,4 +248,27 @@
         }
     }
 }
+@media screen and (min-width:1920px) {
+    .reasons{
+        background-color: $bg2;
+        &__card {
+            &-list {
+                background-color: $white;
+                &--active {
+                    background-color: $light-blue;
+                }
+            }
+            &-transpar {
+                &::before {
+                    border-top: 200px solid $bg2;
+                    border-right: 0px solid $bg2;
+                }
+                &::after {
+                    border-bottom: 200px solid $bg2;
+                    border-right: 0px solid $bg2;
+                }
 
+            }
+        }
+    }
+}

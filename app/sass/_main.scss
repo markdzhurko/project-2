@@ -66,3 +66,24 @@ a {
     background-color: $orange;
     border-radius: 20px 6px;
 }
+.btn--transparent {
+    cursor: pointer;
+    border-radius: 20px 6px;
+    border: 2px solid $white;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $white;
+    background-color: transparent;
+}
+.btn--transparent:hover {
+    background-color: transparent;
+    border: 2px solid $light-blue;
+    border-radius: 20px 6px;
+    color: $light-blue;
+}
+.btn--transparent:active {
+    color: $white;
+    background-color: $light-blue;
+    border-radius: 20px 6px;
+}

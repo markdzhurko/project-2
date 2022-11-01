@@ -1,0 +1,322 @@
+.banner {
+    background-color: $blue;
+    &__ellips {
+        display: none;
+    }
+    &__ellips--white {
+        display: none;
+
+    }
+    &__ellips--radius {
+        display: none;
+
+    }
+    &__trapezoid {
+        display: none;
+
+    }
+    &__trapezoid--s {
+        display: none;
+
+    }
+    &__circuit {
+        display: none;
+
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: $blue;
+        padding-top: 50px;
+    }
+    &__content {
+
+    }
+    &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 145%;
+        color: $white;
+        padding-bottom: 20px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        padding-bottom: 30px;
+    }
+    &__btn {
+        padding: 25px 87px;
+        margin-bottom: 137px;
+    }
+    &__figures {
+        position: absolute;
+        &-circuit {
+            display: none;
+        }
+        &-ellips--radius {
+            display: none;
+        }
+        &-ellips {
+            bottom: 8px;
+            left: 70px;
+        }
+        &-ellips--white {
+            display: none;
+        }
+        &-trapezoid {
+            bottom: 8px;
+            left: -22px;
+        }
+        &-trapezoid--s {
+            display: none;
+        }
+        &-cube {
+            display: none;
+        }
+    }
+    &__svg {
+        width: 84px;
+        height: 84px;
+        &-ellips {
+            transform: rotate(180deg);
+        }
+    }
+}
+@media screen and (min-width:800px) {
+    .banner {
+        &__content {
+            width: 550px;
+        }
+        &__btn {
+            align-self: flex-start;
+            margin-bottom: 50px;
+        }
+        &__figures {
+            &-trapezoid {
+                bottom: 110px;
+                right: -18px;
+                left: auto;
+            }
+            &-ellips {
+                bottom: 8px;
+                right: -18px;
+                left: auto;
+            }
+        }
+        &__svg {
+            width: 97px;
+            height: 97px;
+            &-ellips {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px) {
+    .banner {
+        background-color: transparent;
+        position: relative;
+        top: -100px;
+        &__ellips {
+            position: absolute;
+            display: block;
+            top: 37px;
+            left: 133px;
+            z-index: 1;
+
+        }
+        &__ellips--white {
+            position: absolute;
+            display: block;
+            top: 147px;
+            left: 23px;
+            z-index: 1;
+
+        }
+        &__ellips--radius {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+        }
+        &__trapezoid {
+            position: absolute;
+            display: block;
+            top: 37px;
+            left: 23px;
+            z-index: 1;
+        }
+        &__trapezoid--s {
+            position: absolute;
+            display: block;
+            top: 259px;
+            left: 23px;
+            z-index: 1;
+
+        }
+        &__circuit {
+            position: absolute;
+            display: block;
+            top: 138px;
+            left: 133px;
+            z-index: 1;
+
+        }
+        &__svg-ellips {
+            width: 108px;
+            height: 106px;
+        }
+        &__svg-ellips--white {
+            width: 106px;
+            height: 106px;
+        }
+        &__svg-trapezoid {
+            width: 106px;
+            height: 103px;
+        }
+        &__svg-trapezoid--s {
+            width: 106px;
+            height: 56px;
+        }
+        &__svg-circuit {
+            width: 106px;
+            height: 106px;
+        }
+        &::before {
+            content: '';
+            background-color: $blue;
+            position: absolute;
+            left: 0;
+            width: 657px;
+            height: 350px;
+        }
+        &__body {
+            border-radius: 0 10px 50px 0;
+            align-items: center;
+        }
+        &__figures {
+            &-trapezoid {
+                display: none;
+            }
+            &-ellips {
+                display: none;
+            }
+            &-cube {
+                display: block;
+                bottom: 15px;
+                right: 125px;
+            }
+            &-ellips--radius {
+                display: block;
+                bottom: 15px;
+                right: 20px;
+            }
+        }
+        &__svg {
+            width: 97px;
+            height: 97px;
+            &-ellips {
+                height: 108px;
+                width: 106;
+                transform: rotate(360deg);
+            }
+            &-ellips--radius {
+                width: 127px;
+                height: 117px;
+            }
+            &-cube {
+                width: 50px;
+                height: 50px;
+            }
+            &-trapezoid {
+                width: 106px;
+                height: 103px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1920px) {
+    .banner {
+        &__ellips {
+            top: 15px;
+            left: 111px;
+        }
+        &__ellips--white {
+            top: 111px;
+            left: 15px;
+        }
+        &__trapezoid {
+            top: 15px;
+            left: 15px;
+        }
+        &__trapezoid--s {
+            top: 210px;
+            left: 15px;
+        }
+        &__circuit {
+            top: 111px;
+            left: 113px;
+        }
+        &__svg-ellips {
+            width: 95px;
+            height: 95px;
+        }
+        &__svg-ellips--white {
+            width: 94px;
+            height: 93px;
+        }
+        &__svg-trapezoid {
+            width: 93px;
+            height: 91px;
+        }
+        &__svg-trapezoid--s {
+            width: 93px;
+            height: 50px;
+        }
+        &__svg-circuit {
+            width: 93px;
+            height: 93px;
+        }
+        &::before {
+            content: '';
+            background-color: $blue;
+            position: absolute;
+            left: 0;
+            width: 657px;
+            height: 270px;
+        }
+        &__body {
+            height: 270px;
+        }
+        &__content {
+            width: 100%;
+            display: flex;
+            &-block {
+                width: 60%;
+            }
+        }
+        &__btn-box {
+            width: 40%;
+            display: flex;
+        }
+        &__btn {
+            font-size: 16px;
+            line-height: 19px;
+            align-self: center;
+        }
+        &__title {
+            font-size: 36px;
+            line-height: 48px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 29px;
+        }
+    }
+}
