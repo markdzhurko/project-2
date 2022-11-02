@@ -61,7 +61,8 @@
         }
         &-list {
            list-style: none;
-            position: absolute;
+           position: absolute;
+           top: 0;
            padding: 0;
            visibility: hidden;
            opacity: 0;

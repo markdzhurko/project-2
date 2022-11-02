@@ -251,6 +251,16 @@
 @media screen and (min-width:1920px) {
     .reasons{
         background-color: $bg2;
+        position: relative;
+        &::before {
+            content: '';
+            background: url(../../img/access/Dots.png);
+            width: 500px;
+            height: 350px;
+            position: absolute;
+            bottom: 0;
+            background-position: botoom left;
+        }
         &__card {
             &-list {
                 background-color: $white;
