@@ -1,0 +1,221 @@
+.access {
+    background-color: $bg;
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+    &__content  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        &-title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            color: $txt;
+            z-index: 2;
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 24px;
+            color: #687086;
+            margin-top: 20px;
+        }
+        &-btn {
+            font-size: 16px;
+            line-height: 19px;
+            padding: 25px 95px;
+            margin-top: 30px;
+        }
+    }
+    &__icons {
+        position: relative;
+        height: 600px;
+        &-body {
+            display: flex;
+            align-items: center;
+            padding: 20px 15px ;
+            background-color: $white;
+            box-shadow: 0px 4px 66px rgba(207, 207, 207, 0.25);
+            border-radius: 0 0 30px 0;
+            position: absolute;
+            &--ltc {
+                top: 9%;
+                left: 10%;
+            }
+            &--neo-green {
+                top: 21%;
+                right: 7%;
+            }
+            &--etc {
+                top: 32%;
+                left: 7%;
+            }
+            &--xrm {
+                top: 44%;
+                right: 6%;
+            }
+            &--dash {
+                top: 55%;
+                left: 5%;
+            }
+            &--neo-lightBlue {
+                top: 67%;
+                right: 7%;
+            }
+            &--bitcoin {
+                top: 80%;
+                left: 8%;
+            }
+        }
+        &-img {
+
+        }
+        &-svg {
+            width: 43px;
+            height: 43px;
+        }
+        &-crypt {
+            align-self: center;
+            margin-left: 13px;
+            margin-right: 19px;
+        }
+        &-name {
+            font-size: 16px;
+            line-height: 24px;
+            color: $txt;
+            text-transform: uppercase;
+        }
+        &-currency {
+            font-size: 16px;
+            line-height: 24px;
+            color: $txt2;
+            text-transform: uppercase;
+
+        }
+        &-arrow {
+            align-self: center;
+            &--red {
+
+            }
+            &--green {
+
+            }
+        }
+    }
+}
+@media screen and (min-width:800px) {
+    .access {
+        &__content {
+            &-text {
+                font-size: 18px;
+                line-height: 29px;
+                text-align: center;
+            }
+        }
+        &__icons {
+            height: 500px;
+            &-body {
+                &--ltc {
+                    top: 16%;
+                    left: 48%;
+                }
+                &--neo-green {
+                    top: 37%;
+                    right: 39%;
+                }
+                &--etc {
+                    top: 22%;
+                    left: 13%;
+                }
+                &--xrm {
+                    top: 58%;
+                    right: 46%;
+                }
+                &--dash {
+                    top: 42%;
+                    left: 9%;
+                }
+                &--neo-lightBlue {
+                    top: 39%;
+                    right: 8%;
+                }
+                &--bitcoin {
+                    z-index: 1;
+                    top: 52%;
+                    left: 53%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px) {
+    .access {
+        &__body {
+            flex-direction: row;
+        }
+        &__content {
+            width: 50%;
+            padding-bottom: 120px;
+            &-text {
+                text-align: left;
+            }
+            &-btn {
+                align-self: flex-start;
+            }
+        }
+        &__icons {
+            height: 602px;
+            width: 50%;
+            &-body {
+                &--ltc {
+                    top: 32%;
+                    left: 63%;
+                }
+                &--neo-green {
+                    top: 18%;
+                    right: 27%;
+                }
+                &--etc {
+                    top: 30%;
+                    left: 12%;
+                }
+                &--xrm {
+                    top: 56%;
+                    right: 54%;
+                }
+                &--dash {
+                    top: 70%;
+                    left: 38%;
+                }
+                &--neo-lightBlue {
+                    z-index: 1;
+                    top: 59%;
+                    right: -1%;
+                }
+                &--bitcoin {
+                    top: 43%;
+                    left: 33%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1920px) {
+    .access {
+        position: relative;
+        &::before {
+            content: '';
+            background: url(../../img/access/Dots.png);
+            width: 400px;
+            height: 320px;
+            position: absolute;
+            top: -100px;
+            background-position: top left;
+            }
+        }
+}

@@ -1,0 +1,284 @@
+.reasons {
+    &__body {
+        padding-bottom: 250px;
+        &-title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            text-align: center;
+            color: $txt;
+            margin-bottom: 60px;
+        }
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        &-body {
+            padding: 15px 0;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            padding: 30px 40px;
+            background: $bg;
+            border-radius: 10px 10px 50px 50px;
+            position: relative;
+            overflow: hidden;
+            &:hover::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left:-160px;
+                width: 346px;
+                height: 346px;
+                border-radius: 50%;
+                filter: blur(80px);
+                background-color: #092B82;
+                z-index: 0;
+            }
+            &:active::before {
+                width: 0;
+                height: 0;
+                z-index: 3;
+            }
+            &:active::after {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: 200px;
+                width: 346px;
+                height: 346px;
+                border-radius: 50%;
+                filter: blur(80px);
+                background-color: #092B82;
+                z-index: 0;
+            }
+            &:hover {
+                background-color: $light-blue;
+            }
+            &:hover .reasons__card-title {
+                z-index: 1;
+                color: $white;
+            }
+            &:hover .reasons__card-svg path {
+                z-index: 1;
+                fill: $white;
+            }
+            &:hover .reasons__card-text {
+                z-index: 1;
+                color: $white;
+            }
+            &--active {
+                background-color: $light-blue;
+            }
+
+        }
+        &-icons {
+            margin-bottom: 17px;
+        }
+        &-svg {
+
+        }
+        &-title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 145%;
+            color: $txt;
+            margin-bottom: 20px;
+        }
+        &-text {
+            font-size: 16px;
+            line-height: 24px;
+            color: $txt2;
+        }
+        &-transpar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+        }
+        &-block {
+            width: 162px;
+            position: relative;
+            display: flex;
+        }
+        &-link {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 145%;
+            color: $white;
+            z-index: 5;
+            &:hover {
+                color: $txt2;
+            }
+        }
+        &-arrow {
+            position: absolute;
+            top: 48px;
+            right: -11px;
+            z-index: 5;
+        }
+
+    }
+}
+@media screen and (min-width:800px) {
+    .reasons {
+        &__card {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            &-body {
+                padding: 15px;
+                width: 50%;
+                &:nth-child(1) .reasons__card-list {
+                    border-radius: 10px 40px;
+                }
+                &:nth-child(2) .reasons__card-list {
+                    border-radius: 40px 10px;
+                }
+                &:nth-child(3) .reasons__card-list {
+                    border-radius: 40px 10px;
+                }
+                &:nth-child(4) .reasons__card-list {
+                    border-radius: 10px 40px;
+                }
+            }
+            &-block {
+                margin-right: 25px;
+            }
+            &-arrow {
+                top: 48px;
+                right: -11px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px) {
+    .reasons {
+        &__card {
+            margin: 0 -15px;
+            &-body {
+                &:nth-child(1) .reasons__card-list {
+                    border-radius: 10px 60px;
+                }
+                &:nth-child(2) .reasons__card-list {
+                    border-radius: 60px 10px;
+                }
+                &:nth-child(3) .reasons__card-list {
+                    border-radius: 60px 10px;
+                }
+                &:nth-child(4) .reasons__card-list {
+                    border-radius: 10px 60px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1500px) {
+    .reasons {
+        &__card {
+            position: relative;
+            margin: 0 -15px;
+            &-body {
+                width: 25%;
+                &:nth-child(1) .reasons__card-list {
+                    border-radius: 10px 10px 50px 50px;
+                }
+                &:nth-child(2) .reasons__card-list {
+                    border-radius: 10px 10px 50px 50px;
+                }
+                &:nth-child(3) .reasons__card-list {
+                    border-radius: 10px 10px 50px 50px;
+                }
+                &:nth-child(4) .reasons__card-list {
+                    border-radius: 10px 10px 50px 50px;
+                }
+            }
+            &-list {
+                position: relative;
+            }
+            &-transpar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    right: 0;
+                    top: 0;
+                    border-top: 200px solid $white;
+                    border-right: 0px solid $white;
+                    border-left: 68px solid transparent;
+                    z-index: 4;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    bottom: 0;
+                    right: 0;
+                    border-bottom: 200px solid $white;
+                    border-right: 0px solid $white;
+                    border-left: 68px solid transparent;
+                    z-index: 4;
+                }
+
+            }
+            &-block {
+                width: 162px;
+                margin-right: 25px;
+
+            }
+            &-arrow {
+                top: 48px;
+                right: -11px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1920px) {
+    .reasons{
+        background-color: $bg2;
+        position: relative;
+        &::before {
+            content: '';
+            background: url(../../img/access/Dots.png);
+            width: 500px;
+            height: 350px;
+            position: absolute;
+            bottom: 0;
+            background-position: botoom left;
+        }
+        &__card {
+            &-list {
+                background-color: $white;
+                &--active {
+                    background-color: $light-blue;
+                }
+            }
+            &-transpar {
+                &::before {
+                    border-top: 200px solid $bg2;
+                    border-right: 0px solid $bg2;
+                }
+                &::after {
+                    border-bottom: 200px solid $bg2;
+                    border-right: 0px solid $bg2;
+                }
+
+            }
+        }
+    }
+}

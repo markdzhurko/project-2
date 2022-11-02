@@ -1,0 +1,267 @@
+.footer {
+    background-color: $bg-footer;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    &__info {
+        margin-bottom: 40px;
+        width: 270px;
+        &-logos {
+            margin-bottom: 40px;
+
+        }
+        &-logo {
+        }
+        &-address {
+            margin-bottom: 23px;
+        }
+        &-text {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 26px;
+            color: $txt2;
+        }
+    }
+    &__sponsor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 260px;
+        margin-bottom: 40px;
+        &-body {
+
+        }
+        &-img {
+
+        }
+    }
+    &__sections {
+        &-traders {
+            border-top: 2px solid rgba(249, 249, 251, 0.1);
+            border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+            padding: 15px 0;
+        }
+        &-analytics {
+            border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+            padding: 15px 0;
+        }
+        &-education {
+            border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+            padding: 15px 0;
+        }
+        &-company {
+            border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+            padding: 15px 0;
+        }
+        &-documents {
+            border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+            padding: 15px 0;
+        }
+        &-list {
+           list-style: none;
+           position: absolute;
+           top: 0;
+           padding: 0;
+           visibility: hidden;
+           opacity: 0;
+           transition: all .2s ease;
+        }
+        &-listTraders.show {
+            position: static;
+            top: 0;
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &-listAnalytics.show {
+            position: static;
+            top: 0;
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        &-listEducation.show {
+            position: static;
+            top: 0;
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        &-listCompany.show {
+            position: static;
+            top: 0;
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        &-listDocuments.show {
+            position: static;
+            top: 0;
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        &-item {
+            margin: 5px 0;
+        }
+        &-link {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $bg;
+            opacity: 0.6;
+        }
+    }
+    &__card {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $bg;
+        }
+        &-svg {
+            margin-right: 2px;
+            cursor: pointer;
+            &:hover path {
+                stroke: $light-blue;
+            }
+        }
+    }
+    &__tm {
+        align-self: center;
+        margin-top: 30px;
+        &-text {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 26px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #687086;
+            justify-content: center;
+        }
+    }
+}
+@media screen and (min-width:800px) {
+.footer {
+    &__info {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: min-content min-content;
+        &-logos {
+                grid-column: 1/2;
+                grid-row: 1/2;
+        }
+        &-address {
+            grid-column: 1/2;
+            grid-row: 2/-1;
+        }
+    }
+    &__sponsor {
+        margin: 0;
+        grid-column: 2/-1;
+        grid-row: 2/-1;
+    }
+    &__sections {
+        display: flex;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-template-rows: min-content min-content;
+        border-bottom: 2px solid rgba(249, 249, 251, 0.1);
+        padding-bottom: 80px;
+        &-traders {
+            border: none;
+            padding:0;
+        }
+        &-analytics {
+            border: none;
+            padding:0;
+        }
+        &-education {
+            border: none;
+            padding:0;
+            grid-column: 2/3;
+            margin-top: -185px;
+        }
+        &-company {
+            border: none;
+            padding:0;
+            grid-column: 1/2;
+            grid-row:2/3;
+            margin-top: -97px
+        }
+        &-documents {
+            border: none;
+            padding:0;
+            grid-column: 3/-1;
+            grid-row: 1/2;
+        }
+        &-list {
+           list-style: none;
+            position: static;
+           padding: 0;
+           visibility: visible;
+           opacity: 1;
+        }
+        &-item {
+            margin: 12px 0;
+        }
+    }
+    &__card {
+        margin-bottom: 30px;
+        &-svg{
+            display: none;
+        }
+    }
+
+    }
+}
+@media screen and (min-width:1200px) {
+    .footer {
+        &__body {
+            flex-direction: row;
+            display: grid;
+            grid-template-columns: 33.333% 66.666%;
+            grid-template-rows: 1fr ;
+        }
+        &__info {
+            display: block;
+
+        }
+        &__sections {
+            border-bottom: none;
+            padding-bottom: 70px;
+        }
+        &__tm {
+           display: flex;
+           justify-content: center;
+           width: 100%;
+           border-top: 2px solid rgba(249, 249, 251, 0.1);
+           grid-column: 1/-1;
+           padding-top: 30px;
+        }
+    }
+}
+@media screen and (min-width:1920px) {
+    .footer__sections {
+        display: flex;
+        padding-bottom: 60px;
+        &-education {
+            margin-top: 0;
+        }
+        &-company {
+            margin-top: 0;
+        }
+    }
+}
