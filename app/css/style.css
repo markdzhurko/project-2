@@ -2016,7 +2016,7 @@ a:hover {
 
 .assets__body-span::before {
   content: '';
-  background: url(../../img/assets/line.svg);
+  background: url(../img/assets/line.svg);
   background-repeat: no-repeat;
   height: 5px;
   width: 140px;
@@ -2115,6 +2115,13 @@ a:hover {
   .assets__body-text {
     font-size: 20px;
     line-height: 29px;
+  }
+  .assets__body-span::before {
+    background: url(../img/assets/line-l.svg);
+    background-repeat: no-repeat;
+    width: 175px;
+    height: 9px;
+    bottom: -7px;
   }
   .assets__list-body {
     min-width: 304px;
