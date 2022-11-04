@@ -2129,6 +2129,19 @@ a:hover {
   }
 }
 
+.platform {
+  position: relative;
+}
+
+.platform::before {
+  content: '';
+  width: 100%;
+  height: 383px;
+  bottom: 0;
+  background-color: #F9F9FB;
+  position: absolute;
+}
+
 .platform__body {
   padding-top: 50px;
 }
@@ -2148,6 +2161,7 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 700px;
 }
 
 .platform__card-body {
@@ -2259,8 +2273,12 @@ a:hover {
 
 .platform__card-img {
   position: relative;
-  height: 150px;
-  top: 60px;
+  height: 100%;
+  top: 65px;
+}
+
+.platform__card:nth-child(2) .platform__card-img {
+  top: 137px;
 }
 
 .platform__card-pad {
@@ -2279,11 +2297,22 @@ a:hover {
 }
 
 @media screen and (min-width: 800px) {
+  .platform::before {
+    content: '';
+    height: 273px;
+  }
   .platform__body-title {
     text-align: center;
   }
+  .platform__card {
+    height: 500px;
+  }
   .platform__card-img {
     height: 200px;
+    top: 0;
+  }
+  .platform__card:nth-child(2) .platform__card-img {
+    top: 0;
   }
   .platform__card:nth-child(2) .platform__card-body {
     border-radius: 50px 10px 0 0;
@@ -2300,6 +2329,10 @@ a:hover {
 }
 
 @media screen and (min-width: 1200px) {
+  .platform::before {
+    content: '';
+    height: 330px;
+  }
   .platform__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2307,9 +2340,60 @@ a:hover {
     margin: 0 -15px;
   }
   .platform__card {
+    height: 600px;
     width: 50%;
     padding: 0 15px;
   }
+}
+
+.education {
+  background-color: #F9F9FB;
+}
+
+.education__body {
+  padding-top: 400px;
+}
+
+.education__phone {
+  display: none;
+}
+
+.education__contact-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #0A1F32;
+}
+
+.education__contact-text {
+  font-size: 18px;
+  line-height: 29px;
+  color: #687086;
+}
+
+.education__contact-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0A1F32;
+}
+
+.education__contact-btn {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.education__contact-checkbox {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #0A1F32;
 }
 
 .footer {
