@@ -1089,10 +1089,7 @@ a:hover {
 
 .reasons__card-body {
   padding: 15px 0;
-<<<<<<< HEAD
-=======
   cursor: pointer;
->>>>>>> e5ad7516ace305858d6cd4084bb9cd5c42386c0a
 }
 
 .reasons__card-list {
@@ -2132,8 +2129,6 @@ a:hover {
   }
 }
 
-<<<<<<< HEAD
-=======
 .platform {
   position: relative;
 }
