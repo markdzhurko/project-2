@@ -1089,6 +1089,7 @@ a:hover {
 
 .reasons__card-body {
   padding: 15px 0;
+  cursor: pointer;
 }
 
 .reasons__card-list {
@@ -2128,6 +2129,10 @@ a:hover {
   }
 }
 
+.platform__body {
+  padding-top: 50px;
+}
+
 .platform__body-title {
   font-family: 'Inter';
   font-style: normal;
@@ -2140,6 +2145,9 @@ a:hover {
 
 .platform__card {
   padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .platform__card-body {
@@ -2153,14 +2161,58 @@ a:hover {
   padding: 50px 30px;
   background: #FFFFFF;
   position: relative;
+  border-radius: 10px 50px 50px 10px;
   overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .platform__card-body::before {
   content: '';
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 45%;
+  background: transparent;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #E2E2E2;
+  border-left: 2px solid #E2E2E2;
+  border-right: 2px solid #E2E2E2;
+  border-radius: 10px 50px 0 0;
+  z-index: -1;
+}
+
+.platform__card-body::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  background: transparent;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #0A1F32;
+  border-left: 2px solid #0A1F32;
+  border-right: 2px solid #0A1F32;
+  border-radius: 0 0 50px 10px;
+  z-index: 2;
+}
+
+.platform__card-body:hover {
+  z-index: 2;
+}
+
+.platform__card-body:hover::before {
+  border-top: 2px solid #73CBE8;
+  border-left: 2px solid #73CBE8;
+  border-right: 2px solid #73CBE8;
+}
+
+.platform__card-body:hover::after {
+  border-bottom: 2px solid #73CBE8;
+  border-left: 2px solid #73CBE8;
+  border-right: 2px solid #73CBE8;
+  background: -webkit-gradient(linear, left bottom, left top, from(#73CBE8), color-stop(10%, rgba(196, 196, 196, 0)));
+  background: linear-gradient(360deg, #73CBE8 0%, rgba(196, 196, 196, 0) 10%);
 }
 
 .platform__card-title {
@@ -2191,6 +2243,14 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  z-index: 4;
+  margin-bottom: auto;
+}
+
+.platform__card-link:hover path {
+  fill: #73CBE8;
 }
 
 .platform__card-svg {
@@ -2200,13 +2260,14 @@ a:hover {
 .platform__card-img {
   position: relative;
   height: 150px;
-  top: 61px;
+  top: 60px;
 }
 
 .platform__card-pad {
   position: absolute;
   width: 100%;
   top: 50px;
+  z-index: 2;
 }
 
 .platform__card-mob {
@@ -2214,6 +2275,41 @@ a:hover {
   width: 34%;
   top: 0;
   right: 8%;
+  z-index: 2;
+}
+
+@media screen and (min-width: 800px) {
+  .platform__body-title {
+    text-align: center;
+  }
+  .platform__card-img {
+    height: 200px;
+  }
+  .platform__card:nth-child(2) .platform__card-body {
+    border-radius: 50px 10px 0 0;
+  }
+  .platform__card:nth-child(2) .platform__card-body::before {
+    border-radius: 50px 10px 0 0;
+  }
+  .platform__card:nth-child(2) .platform__card-body {
+    border-radius: 0 0 10px 50px;
+  }
+  .platform__card:nth-child(2) .platform__card-body::after {
+    border-radius: 0 0 10px 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .platform__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -15px;
+  }
+  .platform__card {
+    width: 50%;
+    padding: 0 15px;
+  }
 }
 
 .footer {
