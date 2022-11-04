@@ -1,0 +1,189 @@
+.platform {
+
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 383px;
+        bottom: 0;
+        background-color: $bg;
+        position: absolute;
+    }
+    &__body {
+        padding-top: 50px;
+        &-title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            color: $txt;
+            margin-bottom: 40px;
+        }
+    }
+    &__card {
+        padding: 20px 0;
+        display: flex;
+        height: 700px;
+        &-body {
+            display: flex;
+            flex-direction: column;
+            padding: 50px 30px ;
+            background: $white;
+            position: relative;
+            border-radius: 10px 50px 50px 10px;
+            overflow: hidden;
+            cursor: pointer;
+            z-index: 1;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 45%;
+                background: transparent;
+                top: 0;
+                left: 0;
+                border-top: 2px solid $grey;
+                border-left: 2px solid $grey;
+                border-right: 2px solid $grey;
+                border-radius: 10px 50px 0 0;
+                z-index: -1;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 55%;
+                background: transparent;
+                bottom: 0;
+                left: 0;
+                border-bottom: 2px solid $txt;
+                border-left: 2px solid $txt;
+                border-right: 2px solid $txt;
+                border-radius: 0 0 50px 10px;
+                z-index: 2;
+            }
+            &:hover {
+                z-index: 2;
+
+            }
+            &:hover::before {
+                border-top: 2px solid $light_blue;
+                border-left: 2px solid $light_blue;
+                border-right: 2px solid $light_blue;
+            }
+            &:hover::after {
+                border-bottom: 2px solid $light_blue;
+                border-left: 2px solid $light_blue;
+                border-right: 2px solid $light_blue;
+                background: linear-gradient(360deg, #73CBE8 0%, rgba(196, 196, 196, 0) 10%);
+            }
+        }
+        &-title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 145%;
+            color: $txt;
+            margin-bottom: 20px;
+        }
+        &-text {
+            font-size: 16px;
+            line-height: 24px;
+            color: $txt2;
+            margin-bottom: 30px;
+        }
+        &-link {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: $orange;
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            z-index: 4;
+            margin-bottom: auto;
+            &:hover path {
+                fill: $light_blue;
+            }
+        }
+        &-svg {
+            margin-left: 10px;
+        }
+        &-img {
+            position: relative;
+            height: 100%;
+            top: 65px;
+        }
+        &:nth-child(2) .platform__card-img {
+            top: 137px;
+        }
+        &-pad {
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            z-index: 2;
+        }
+        &-mob {
+            position: absolute;
+            width: 34%;
+            top: 0;
+            right: 8%;
+            z-index: 2;
+        }
+
+    }
+}
+@media screen and (min-width:800px) {
+    .platform {
+        &::before {
+            content: '';
+            height: 273px;
+        }
+        &__body {
+            &-title {
+                text-align: center;
+            }
+        }
+        &__card {
+            height: 500px;
+            &-img {
+                height: 200px;
+                top: 0;
+            }
+            &:nth-child(2) .platform__card-img {
+                top: 0;
+            }
+            &:nth-child(2) .platform__card-body{
+                border-radius: 50px 10px 0 0;
+            }
+            &:nth-child(2) .platform__card-body::before {
+                border-radius: 50px 10px 0 0;
+            }
+            &:nth-child(2) .platform__card-body {
+                border-radius: 0 0 10px 50px;
+            }
+            &:nth-child(2) .platform__card-body::after {
+                border-radius: 0 0 10px 50px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px) {
+    .platform {
+        &::before {
+        content: '';
+        height: 330px;
+        }
+        &__list {
+            display: flex;
+            margin: 0 -15px;
+        }
+        &__card {
+            height: 600px;
+            width: 50%;
+            padding: 0 15px;
+        }
+    }
+}

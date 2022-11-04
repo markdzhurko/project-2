@@ -1,0 +1,70 @@
+.education {
+    background-color: $bg;
+    &__body {
+        padding-top: 400px;
+    }
+    &__phone {
+        display: none;
+        &-img {
+
+        }
+    }
+    &__contact {
+        &-title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            color: $txt;
+        }
+        &-text {
+            font-size: 18px;
+            line-height: 29px;
+            color: $txt2;
+        }
+        &-links {
+
+        }
+        &-link {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $txt ;
+        }
+        &-svg {
+
+        }
+        &-input {
+
+        }
+        &-phone {
+
+        }
+        &-name {
+
+        }
+        &-register {
+
+        }
+        &-btn {
+            font-family: 'Public Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: $white;
+        }
+        &-checkbox {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            color: $txt;
+        }
+        &-span {
+
+        }
+
+    }
+
+}
