@@ -12,6 +12,7 @@
     &__contact {
         display: flex;
         flex-direction: column;
+        z-index: 4;
         &-title {
             font-family: 'Inter';
             font-style: normal;

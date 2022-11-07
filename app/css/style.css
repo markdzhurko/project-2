@@ -2366,6 +2366,7 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 4;
 }
 
 .education__contact-title {
@@ -2630,6 +2631,7 @@ a:hover {
   border-radius: 10px 10px 50px 50px;
   position: relative;
   overflow: hidden;
+  outline: none;
 }
 
 .team__card-list:hover::before {
@@ -2900,6 +2902,109 @@ a:hover {
   .team__card-transpar::after {
     border-bottom: 200px solid #f2f2f2;
     border-right: 0px solid #f2f2f2;
+  }
+}
+
+.forex {
+  background: #003458;
+}
+
+.forex__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 60px 0;
+}
+
+.forex__title-body {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.forex__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.forex__content-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+  border-bottom: 2px solid rgba(249, 249, 251, 0.35);
+  padding: 25px 0;
+}
+
+.forex__content-link:nth-child(1) {
+  border-top: 2px solid rgba(249, 249, 251, 0.35);
+}
+
+.forex__content-svg {
+  margin-right: 10px;
+}
+
+.forex__pic {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .forex__body {
+    display: grid;
+    grid-template-columns: 1fr -webkit-min-content;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: -webkit-min-content -webkit-min-content;
+    grid-template-rows: min-content min-content;
+  }
+  .forex__title {
+    grid-column: 1/-1;
+  }
+  .forex__pic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .forex__pic-title {
+    font-family: 'Quikhand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: right;
+    color: #FFFFFF;
+  }
+  .forex__pic-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #F5F06E;
   }
 }
 
