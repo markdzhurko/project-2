@@ -28,52 +28,37 @@
             border-radius: 10px 10px 50px 50px;
             position: relative;
             overflow: hidden;
-            &:hover::before {
-                content: '';
-                position: absolute;
-                top: 20px;
-                left:-160px;
-                width: 346px;
-                height: 346px;
-                border-radius: 50%;
-                filter: blur(80px);
-                background-color: #092B82;
-                z-index: 0;
-            }
-            &:active::before {
-                width: 0;
-                height: 0;
-                z-index: 3;
-            }
-            &:active::after {
-                content: '';
-                position: absolute;
-                top: 20px;
-                left: 200px;
-                width: 346px;
-                height: 346px;
-                border-radius: 50%;
-                filter: blur(80px);
-                background-color: #092B82;
-                z-index: 0;
-            }
-            &:hover {
-                background-color: $light-blue;
-            }
-            &:hover .reasons__card-title {
-                z-index: 1;
-                color: $white;
-            }
-            &:hover .reasons__card-svg path {
-                z-index: 1;
-                fill: $white;
-            }
-            &:hover .reasons__card-text {
-                z-index: 1;
-                color: $white;
-            }
             &--active {
                 background-color: $light-blue;
+                &:hover::before {
+                    content: '';
+                    position: absolute;
+                    top: 20px;
+                    left:-160px;
+                    width: 346px;
+                    height: 346px;
+                    border-radius: 50%;
+                    filter: blur(80px);
+                    background-color: #092B82;
+                    z-index: 0;
+                }
+                &:active::before {
+                    width: 0;
+                    height: 0;
+                    z-index: 3;
+                }
+                &:active::after {
+                    content: '';
+                    position: absolute;
+                    top: 20px;
+                    left: 200px;
+                    width: 346px;
+                    height: 346px;
+                    border-radius: 50%;
+                    filter: blur(80px);
+                    background-color: #092B82;
+                    z-index: 0;
+                }
             }
 
         }
@@ -117,8 +102,9 @@
             line-height: 145%;
             color: $white;
             z-index: 5;
-            &:hover {
+            &:hover,&:hover path {
                 color: $txt2;
+                fill: $txt2;
             }
         }
         &-arrow {

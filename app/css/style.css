@@ -1112,7 +1112,11 @@ a:hover {
   overflow: hidden;
 }
 
-.reasons__card-list:hover::before {
+.reasons__card-list--active {
+  background-color: #73CBE8;
+}
+
+.reasons__card-list--active:hover::before {
   content: '';
   position: absolute;
   top: 20px;
@@ -1126,13 +1130,13 @@ a:hover {
   z-index: 0;
 }
 
-.reasons__card-list:active::before {
+.reasons__card-list--active:active::before {
   width: 0;
   height: 0;
   z-index: 3;
 }
 
-.reasons__card-list:active::after {
+.reasons__card-list--active:active::after {
   content: '';
   position: absolute;
   top: 20px;
@@ -1144,29 +1148,6 @@ a:hover {
           filter: blur(80px);
   background-color: #092B82;
   z-index: 0;
-}
-
-.reasons__card-list:hover {
-  background-color: #73CBE8;
-}
-
-.reasons__card-list:hover .reasons__card-title {
-  z-index: 1;
-  color: #FFFFFF;
-}
-
-.reasons__card-list:hover .reasons__card-svg path {
-  z-index: 1;
-  fill: #FFFFFF;
-}
-
-.reasons__card-list:hover .reasons__card-text {
-  z-index: 1;
-  color: #FFFFFF;
-}
-
-.reasons__card-list--active {
-  background-color: #73CBE8;
 }
 
 .reasons__card-icons {
@@ -1220,8 +1201,9 @@ a:hover {
   z-index: 5;
 }
 
-.reasons__card-link:hover {
+.reasons__card-link:hover, .reasons__card-link:hover path {
   color: #687086;
+  fill: #687086;
 }
 
 .reasons__card-arrow {
