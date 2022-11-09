@@ -2638,7 +2638,11 @@ a:hover {
   outline: none;
 }
 
-.team__card-list:hover::before {
+.team__card-list--active {
+  background-color: #73CBE8;
+}
+
+.team__card-list--active:hover::before {
   content: '';
   position: absolute;
   top: 20px;
@@ -2652,13 +2656,13 @@ a:hover {
   z-index: 0;
 }
 
-.team__card-list:active::before {
+.team__card-list--active:active::before {
   width: 0;
   height: 0;
   z-index: 3;
 }
 
-.team__card-list:active::after {
+.team__card-list--active:active::after {
   content: '';
   position: absolute;
   top: 20px;
@@ -2670,29 +2674,6 @@ a:hover {
           filter: blur(80px);
   background-color: #092B82;
   z-index: 0;
-}
-
-.team__card-list:hover {
-  background-color: #73CBE8;
-}
-
-.team__card-list:hover .team__card-title {
-  z-index: 1;
-  color: #FFFFFF;
-}
-
-.team__card-list:hover .team__card-svg path {
-  z-index: 1;
-  fill: #FFFFFF;
-}
-
-.team__card-list:hover .team__card-text {
-  z-index: 1;
-  color: #FFFFFF;
-}
-
-.team__card-list--active {
-  background-color: #73CBE8;
 }
 
 .team__card-number {
@@ -2752,8 +2733,9 @@ a:hover {
   z-index: 5;
 }
 
-.team__card-link:hover {
+.team__card-link:hover, .team__card-link:hover path {
   color: #687086;
+  fill: #687086;
 }
 
 .team__card-arrow {
