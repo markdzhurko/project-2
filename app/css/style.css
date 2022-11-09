@@ -158,6 +158,12 @@ a:hover {
   border-radius: 20px 6px;
 }
 
+@media screen and (min-width: 800px) {
+  .slick-slider {
+    position: static;
+  }
+}
+
 .header__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2586,7 +2592,7 @@ a:hover {
 
 .team__body {
   padding-top: 100px;
-  padding-bottom: 400px;
+  padding-bottom: 150px;
 }
 
 .team__body-title {
@@ -2974,9 +2980,8 @@ a:hover {
 
 @media screen and (min-width: 1200px) {
   .forex {
-    background: transparent;
+    background: #F9F9FB;
     position: relative;
-    top: -330px;
     z-index: 12;
   }
   .forex::after {
@@ -2987,6 +2992,16 @@ a:hover {
     top: 0;
     right: 0;
     background: #003458;
+  }
+  .forex::before {
+    content: '';
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FFFFFF;
+    z-index: -11;
   }
   .forex__body {
     display: grid;
@@ -3079,6 +3094,280 @@ a:hover {
     text-align: right;
     color: #F5F06E;
     z-index: 4;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .forex::before {
+    background: #f2f2f2;
+  }
+}
+
+.analytics {
+  background: #F9F9FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.analytics__title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #0A1F32;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.analytics__all {
+  margin-bottom: 40px;
+}
+
+.analytics__all-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FF813A;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #FF813A;
+  margin-left: 30px;
+}
+
+.analytics__all-link:hover {
+  border-bottom: 2px solid #73CBE8;
+}
+
+.analytics__all-btn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  z-index: 3;
+}
+
+.analytics__all-btn:hover, .analytics__all-btn:hover path {
+  background-color: #73CBE8;
+  fill: #FFFFFF;
+}
+
+.analytics__all-btn--arrow-left {
+  display: none;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 30px;
+  left: 0;
+}
+
+.analytics__all-btn--arrow-right {
+  display: none;
+  top: 30px;
+  right: 0;
+}
+
+.analytics__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: scroll;
+}
+
+.analytics__card {
+  padding: 0 30px;
+}
+
+.analytics__card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.analytics__card-block {
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  padding: 10px 20px 30px;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 124px;
+}
+
+.analytics__card-pic {
+  display: none;
+  position: relative;
+  height: 124px;
+}
+
+.analytics__card-pic::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#003458), to(#FF813A));
+  background: linear-gradient(90deg, #003458 0%, #FF813A 100%);
+  opacity: 0.91;
+  border-radius: 10px 10px 0 0;
+}
+
+.analytics__card-img {
+  border-radius: 10px 10px 0 0;
+}
+
+.analytics__card-data {
+  margin-bottom: 15px;
+}
+
+.analytics__card-date {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  color: #E2E2E2;
+}
+
+.analytics__card-name {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  color: #E2E2E2;
+}
+
+.analytics__card-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0A1F32;
+}
+
+.analytics__card-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #687086;
+  margin-bottom: 20px;
+}
+
+.analytics__card-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0A1F32;
+}
+
+.analytics__card-link:hover path {
+  fill: #73CBE8;
+}
+
+.analytics__card-svg {
+  margin-left: 8px;
+}
+
+.analytics__card-buttons {
+  display: none;
+}
+
+.analytics__card.slick-active .analytics__card-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.analytics__card.slick-active .analytics__card-block {
+  margin-top: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .analytics {
+    position: relative;
+  }
+  .analytics__title {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-left: 0;
+  }
+  .analytics__all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .analytics__all-link {
+    margin-left: 0;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-bottom: 40px;
+  }
+  .analytics__all-btn--arrow-left {
+    top: 62px;
+    left: calc(50% - 140px);
+  }
+  .analytics__all-btn--arrow-right {
+    top: 62px;
+    right: calc(50% - 140px);
+  }
+  .analytics__card-buttons {
+    display: block;
+  }
+  .analytics__card-data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .analytics__card-date {
+    margin-right: 20px;
+  }
+  .analytics__card-date::after {
+    content: '';
+    border-right: 2px solid #E2E2E2;
+    padding-right: 20px;
+  }
+  .analytics__card-btn {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #73CBE8;
+    background: transparent;
+    color: #73CBE8;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 10px;
+    margin-top: 30px;
+    border-radius: 2px;
+  }
+  .analytics__card-btn:hover {
+    background: #73CBE8;
+    color: #FFFFFF;
   }
 }
 

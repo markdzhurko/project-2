@@ -108,3 +108,8 @@ a {
     background-color: transparent;
     border-radius: 20px 6px;
 }
+.slick-slider {
+    @media screen and (min-width:800px) {
+        position: static;
+    }
+}
