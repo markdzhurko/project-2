@@ -41,11 +41,13 @@
                     filter: blur(80px);
                     background-color: #092B82;
                     z-index: 0;
+                    transition: all 0.3s ease;
                 }
                 &:active::before {
                     width: 0;
                     height: 0;
                     z-index: 3;
+                    transition: all 0.3s ease;
                 }
                 &:active::after {
                     content: '';
@@ -58,6 +60,7 @@
                     filter: blur(80px);
                     background-color: #092B82;
                     z-index: 0;
+                    transition: all 0.3s ease;
                 }
             }
 

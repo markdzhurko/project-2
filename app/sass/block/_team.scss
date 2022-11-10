@@ -43,6 +43,8 @@
                     filter: blur(80px);
                     background-color: #092B82;
                     z-index: 0;
+                        transition: all .3s ease;
+
                 }
                 &:active::before {
                     width: 0;

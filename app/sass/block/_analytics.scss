@@ -117,12 +117,13 @@
             font-size: 16px;
             line-height: 24px;
             color: $txt;
+            margin-bottom: 30px;
         }
         &-text {
             font-size: 16px;
             line-height: 24px;
             color: $txt2;
-            margin-bottom: 20px;
+            margin-bottom: auto;
         }
         &-link {
             display: flex;
@@ -173,11 +174,11 @@
             }
             &-btn {
                 &--arrow-left {
-                    top: 62px;
+                    top: 167px;
                     left: calc(50% - 140px);
                 }
                 &--arrow-right {
-                    top: 62px;
+                    top: 167px;
                     right: calc(50% - 140px);
                 }
             }

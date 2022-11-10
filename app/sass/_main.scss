@@ -54,6 +54,7 @@ a {
     line-height: 24px;
     color: $white;
     background-color: $orange;
+    transition: all 0.3s ease;
 }
 .btn--color-orange:hover {
     background-color: transparent;
@@ -75,6 +76,7 @@ a {
     line-height: 24px;
     color: $white;
     background-color: transparent;
+    transition: all 0.3s ease;
 }
 .btn--transparent-blue:hover {
     background-color: transparent;
@@ -96,6 +98,7 @@ a {
     line-height: 24px;
     color: $orange;
     background-color: transparent;
+    transition: all 0.3s ease;
 }
 .btn--transparent-orange:hover {
     background-color: $orange;
