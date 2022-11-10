@@ -1,17 +1,17 @@
-const burger = document.querySelector('.header__burger')
-const burgerMenu = document.querySelector('.header__menu');
-const burgerLogin = document.querySelector('.header__login');
-const burgerClose = document.querySelector('.header__burger');
-const traderList = document.querySelector('.footer__card-svg--traders');
-const traderShow = document.querySelector('.footer__sections-listTraders');
-const analyticsList = document.querySelector('.footer__card-svg--analystics');
-const analyticsShow = document.querySelector('.footer__sections-listAnalytics');
-const educationList = document.querySelector('.footer__card-svg--education');
-const educationShow = document.querySelector('.footer__sections-listEducation');
-const companyList = document.querySelector('.footer__card-svg--company');
-const companyShow = document.querySelector('.footer__sections-listCompany');
-const documentsList = document.querySelector('.footer__card-svg--documents');
-const documentsShow = document.querySelector('.footer__sections-listDocuments');
+var burger = document.querySelector('.header__burger')
+var burgerMenu = document.querySelector('.header__menu');
+var burgerLogin = document.querySelector('.header__login');
+var burgerClose = document.querySelector('.header__burger');
+var traderList = document.querySelector('.footer__card-svg--traders');
+var traderShow = document.querySelector('.footer__sections-listTraders');
+var analyticsList = document.querySelector('.footer__card-svg--analystics');
+var analyticsShow = document.querySelector('.footer__sections-listAnalytics');
+var educationList = document.querySelector('.footer__card-svg--education');
+var educationShow = document.querySelector('.footer__sections-listEducation');
+var companyList = document.querySelector('.footer__card-svg--company');
+var companyShow = document.querySelector('.footer__sections-listCompany');
+var documentsList = document.querySelector('.footer__card-svg--documents');
+var documentsShow = document.querySelector('.footer__sections-listDocuments');
 
 
 burger.addEventListener('click', burgerToggle);

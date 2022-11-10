@@ -553,7 +553,7 @@ a:hover {
 
 .trustee {
   position: relative;
-  background: url(../../img/trustee/mans.jpg);
+  background: url(../img/trustee/mans.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #0A1F32;
@@ -1356,7 +1356,7 @@ a:hover {
   }
   .reasons::before {
     content: '';
-    background: url(../../img/access/Dots.png);
+    background: url(../img/access/Dots.png);
     width: 500px;
     height: 350px;
     position: absolute;
@@ -1968,7 +1968,7 @@ a:hover {
   }
   .access::before {
     content: '';
-    background: url(../../img/access/Dots.png);
+    background: url(../img/access/Dots.png);
     width: 400px;
     height: 320px;
     position: absolute;
@@ -2048,7 +2048,7 @@ a:hover {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  padding-bottom: 120px;
+  margin-bottom: 120px;
 }
 
 .assets__list-body {
@@ -2548,7 +2548,7 @@ a:hover {
   .education__phone::after {
     content: '';
     position: absolute;
-    background: url(../../img/education/Back.svg);
+    background: url(../img/education/Back.svg);
     background-repeat: no-repeat;
     width: 560px;
     height: 270px;
@@ -2559,7 +2559,7 @@ a:hover {
   .education__phone::before {
     content: '';
     position: absolute;
-    background: url(../../img/education/Back-s.svg);
+    background: url(../img/education/Back-s.svg);
     background-repeat: no-repeat;
     width: 560px;
     height: 270px;
