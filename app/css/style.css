@@ -1979,6 +1979,7 @@ a:hover {
 
 .assets {
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .assets__body {
@@ -2039,8 +2040,20 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: scroll;
   padding-bottom: 15px;
+  overflow: hidden;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .assets__list--second {
@@ -2049,6 +2062,21 @@ a:hover {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   margin-bottom: 120px;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-name: slidein-r;
+          animation-name: slidein-r;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.assets__list:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .assets__list-body {
@@ -2067,6 +2095,42 @@ a:hover {
   min-width: 134px;
   padding: 10px 30px;
   border-radius: 10px;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: -100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: -100%;
+  }
+}
+
+@-webkit-keyframes slidein-r {
+  from {
+    margin-right: 0%;
+  }
+  to {
+    margin-right: -100%;
+  }
+}
+
+@keyframes slidein-r {
+  from {
+    margin-right: 0%;
+  }
+  to {
+    margin-right: -100%;
+  }
 }
 
 @media screen and (min-width: 800px) {
