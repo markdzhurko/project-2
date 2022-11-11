@@ -2236,13 +2236,15 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 30px;
   background: #FFFFFF;
   position: relative;
+  padding: 2px 2px;
   border-radius: 10px 50px 50px 10px;
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
+  -webkit-box-shadow: inset 0px 2px 0 2px #E2E2E2;
+          box-shadow: inset 0px 2px 0 2px #E2E2E2;
 }
 
 .platform__card-body::before {
@@ -2253,11 +2255,14 @@ a:hover {
   background: transparent;
   top: 0;
   left: 0;
-  border-top: 2px solid #E2E2E2;
-  border-left: 2px solid #E2E2E2;
-  border-right: 2px solid #E2E2E2;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
   border-radius: 10px 50px 0 0;
   z-index: -1;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0.2;
 }
 
 .platform__card-body::after {
@@ -2280,11 +2285,20 @@ a:hover {
 }
 
 .platform__card-body:hover::before {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   border-top: 2px solid #73CBE8;
   border-left: 2px solid #73CBE8;
   border-right: 2px solid #73CBE8;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  opacity: 1;
+}
+
+.platform__card-body:hover::before {
+  border-top: 2px solid #73CBE8;
+  border-left: 2px solid #73CBE8;
+  border-right: 2px solid #73CBE8;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .platform__card-body:hover::after {
@@ -2295,6 +2309,13 @@ a:hover {
   background: linear-gradient(360deg, #73CBE8 0%, rgba(196, 196, 196, 0) 10%);
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+}
+
+.platform__card-wrapper {
+  background-color: #FFFFFF;
+  z-index: 1;
+  padding: 48px 26px;
+  border-radius: 10px 50px 50px 10px;
 }
 
 .platform__card-title {
@@ -2379,6 +2400,9 @@ a:hover {
     height: 200px;
     top: 0;
   }
+  .platform__card:nth-child(2) .platform__card-wrapper {
+    border-radius: 50px 10px 0 0;
+  }
   .platform__card:nth-child(2) .platform__card-img {
     top: 0;
   }
@@ -2389,7 +2413,7 @@ a:hover {
     border-radius: 50px 10px 0 0;
   }
   .platform__card:nth-child(2) .platform__card-body {
-    border-radius: 0 0 10px 50px;
+    border-radius: 50px 10px 10px 50px;
   }
   .platform__card:nth-child(2) .platform__card-body::after {
     border-radius: 0 0 10px 50px;

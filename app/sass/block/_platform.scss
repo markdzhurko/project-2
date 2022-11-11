@@ -28,13 +28,14 @@
         &-body {
             display: flex;
             flex-direction: column;
-            padding: 50px 30px ;
             background: $white;
             position: relative;
+            padding: 2px 2px;
             border-radius: 10px 50px 50px 10px;
             overflow: hidden;
             cursor: pointer;
             z-index: 1;
+            box-shadow: inset 0px 2px 0 2px $grey;
             &::before {
                 content: '';
                 position: absolute;
@@ -43,11 +44,13 @@
                 background: transparent;
                 top: 0;
                 left: 0;
-                border-top: 2px solid $grey;
-                border-left: 2px solid $grey;
-                border-right: 2px solid $grey;
+                border-top: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-right: 2px solid transparent;
                 border-radius: 10px 50px 0 0;
                 z-index: -1;
+                transform: translateY(100%);
+                opacity: 0.2;
             }
             &::after {
                 content: '';
@@ -65,13 +68,19 @@
             }
             &:hover {
                 z-index: 2;
-
+                &::before {
+                    transform: translateY(0);
+                    border-top: 2px solid $light_blue;
+                    border-left: 2px solid $light_blue;
+                    border-right: 2px solid $light_blue;
+                    opacity: 1;
+                }
             }
             &:hover::before {
                 border-top: 2px solid $light_blue;
                 border-left: 2px solid $light_blue;
                 border-right: 2px solid $light_blue;
-                transition: all .3s ease;
+                transition: all .5s ease;
             }
             &:hover::after {
                 border-bottom: 2px solid $light_blue;
@@ -80,6 +89,13 @@
                 background: linear-gradient(360deg, #73CBE8 0%, rgba(196, 196, 196, 0) 10%);
                 transition: all .5s ease;
             }
+        }
+        &-wrapper {
+            background-color: $white;
+            z-index: 1;
+            padding: 48px 26px;
+            border-radius: 10px 50px 50px 10px;
+
         }
         &-title {
             font-family: 'Inter';
@@ -154,6 +170,10 @@
                 height: 200px;
                 top: 0;
             }
+            &:nth-child(2) .platform__card-wrapper {
+                border-radius: 50px 10px 0 0;
+            }
+
             &:nth-child(2) .platform__card-img {
                 top: 0;
             }
@@ -164,7 +184,7 @@
                 border-radius: 50px 10px 0 0;
             }
             &:nth-child(2) .platform__card-body {
-                border-radius: 0 0 10px 50px;
+                border-radius: 50px 10px 10px 50px;
             }
             &:nth-child(2) .platform__card-body::after {
                 border-radius: 0 0 10px 50px;
