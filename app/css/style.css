@@ -929,13 +929,15 @@ a:hover {
 }
 
 .slide__list-card {
-  background: url(../img/slide/mansSmall.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 197px;
   width: 198px;
   position: relative;
-  border-radius: 0 0 30px 10px;
+  border-radius: 10px 10px 30px 10px;
+  -webkit-box-shadow: white 0px 0px 0px 7px;
+          box-shadow: white 0px 0px 0px 7px;
   cursor: pointer;
 }
 
@@ -946,20 +948,27 @@ a:hover {
   background-color: transparent;
   bottom: 99px;
   left: -7px;
-  height: 101px;
-  border-top: 7px solid #FFFFFF;
-  border-left: 7px solid #FFFFFF;
-  border-right: 7px solid #FFFFFF;
+  height: 104px;
+  border-top: 7px solid  transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid  transparent;
   border-radius: 10px 10px 0 0;
-  z-index: 3;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
 }
 
 .slide__list-card:hover::before {
   border-top: 7px solid #73CBE8;
   border-left: 7px solid #73CBE8;
   border-right: 7px solid #73CBE8;
+  background-color: rgba(15, 38, 62, 0.59);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  z-index: 1;
 }
 
 .slide__list-card:active::before {
@@ -991,36 +1000,61 @@ a:hover {
   border-left: 7px solid #73CBE8;
   border-right: 7px solid #73CBE8;
   border-radius: 0 0 30px 10px;
+  z-index: 4;
 }
 
-.slide__list-card--active::before {
+.slide__list-card--wrapper {
+  position: relative;
+}
+
+.slide__list-card--wrapper::before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  background-color: transparent;
+  z-index: 5;
+  position: absolute;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.slide__list-card:hover::before {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   background-color: rgba(15, 38, 62, 0.59);
-  border-top: 7px solid #73CBE8;
-  border-left: 7px solid #73CBE8;
-  border-right: 7px solid #73CBE8;
+  border-radius: 10px 10px 0 0;
 }
 
-.slide__list-cardBonus {
+.slide__list-img {
+  display: inline-block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  z-index: 4;
+  border-radius: 10px 10px 30px 10px;
+}
+
+.slide__list--cardBonus {
   background: url(../img/slide/bonus.jpg);
 }
 
-.slide__list-cardBonus::after {
+.slide__list--cardBonus::after {
   content: 'Бонусы до 30%';
 }
 
-.slide__list-cardBuild {
+.slide__list--cardBuild {
   background: url(../img/slide/build.jpg);
 }
 
-.slide__list-cardBuild::after {
+.slide__list--cardBuild::after {
   content: 'Гарантия безопасной торговли';
 }
 
-.slide__list-cardArms {
+.slide__list--cardArms {
   background: url(../img/slide/arms.jpg);
 }
 
-.slide__list-cardArms::after {
+.slide__list--cardArms::after {
   content: 'Эксперты международного рынка';
 }
 
@@ -1053,10 +1087,10 @@ a:hover {
     width: 291px;
   }
   .slide__list-card::before {
-    width: 304px;
+    width: 306px;
   }
   .slide__list-card::after {
-    width: 304px;
+    width: 306px;
   }
 }
 
@@ -1598,7 +1632,7 @@ a:hover {
     position: absolute;
     left: 0;
     width: 657px;
-    height: 350px;
+    height: 349px;
   }
   .banner__body {
     border-radius: 0 10px 50px 0;
